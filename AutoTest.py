@@ -11,8 +11,8 @@ import datetime
 
 class Test:
     def __init__(self):
-        self.onn = pymysql.connect(host="localhost", port=3306, user='root', passwd ='Zhang99215', db='test1')
-        self.cur = conn.cursor()
+        self.conn = pymysql.connect(host="localhost", port=3306, user='root', passwd='Zhang99215', db='test1')
+        self.cur = self.conn.cursor()
         self.f = Faker(locale="zh_CN")
         self.passwdNumber = "0123456789"
 
